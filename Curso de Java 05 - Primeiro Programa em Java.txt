@@ -15,12 +15,12 @@ class HelloWorld {
     //nome da classe HelloWorld 
 
     public static void main(String[] args) {
-        // public static. Modificador de acesso do método 
-        // void. Tipo de retorno do método
-        // main. Nome do método
-        // String [] args, parâmetros ou argumentos do métodos
+        // public static = Modificador de acesso do método 
+        // void = Tipo de retorno do método
+        // main = Nome do método
+        // String [] args = parâmetros ou argumentos do métodos
         System.out.println("Hello World!");
-        // System.out.println. É onde fica o codigo
-        // chaves {}, são blocos
+        // System.out.println = É onde fica o codigo
+        // chaves {} = são blocos
     }
 }
