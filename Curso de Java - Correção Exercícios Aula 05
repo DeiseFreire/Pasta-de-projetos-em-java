@@ -1,0 +1,18 @@
+/*
+ * Fonte da ideia:
+ * Curso de Java: correção exercícios aula 05. Produção de Loiane  
+ * Groner. Publicado pelo canal Loiane 
+ * Groner. [S.l.: s.n.], 2013. 1 videoaula (5 mins. 7 segs.). Youtube.
+ */
+package aula05.labs;
+
+/**
+ *
+ * @author deise
+ */
+class OlaMundo {
+
+    public static void main(String[] args) {
+        System.out.println("Olá mundo!");
+    }
+}
