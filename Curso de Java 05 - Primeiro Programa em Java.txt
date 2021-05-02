@@ -1,8 +1,7 @@
 /*
  * Fonte da ideia:
- * Curso de Java 05: Primeiro Programa em   * Java. Produção de Loiane Groner.  
- * Publicado pelo canal Loiane Groner. [S.  * l.: s. n.], 2013. 1 * videoaula (27  
- * mins. 41 segs.). Youtube.
+ * Curso de Java 05: Primeiro Programa em Java. Produção de Loiane Groner.  
+ * Publicado pelo canal Loiane Groner. [S. l.: s. n.], 2013. 1 videoaula (27 mins. 41 segs.). Youtube.
  */
 package aula05;
 
@@ -11,16 +10,7 @@ package aula05;
  * @author deise
  */
 class HelloWorld {
-    //class, declaração da classe
-    //nome da classe HelloWorld 
-
-    public static void main(String[] args) {
-        // public static = Modificador de acesso do método 
-        // void = Tipo de retorno do método
-        // main = Nome do método
-        // String [] args = parâmetros ou argumentos do métodos
-        System.out.println("Hello World!");
-        // System.out.println = É onde fica o codigo
-        // chaves {} = são blocos
+    public static void main(String[] args) {   
+        System.out.println("Hello World!");   
     }
 }
