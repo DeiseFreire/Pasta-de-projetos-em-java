@@ -5,6 +5,9 @@
  */
 package formularios;
 
+import Classes.Dados;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author deise
@@ -113,7 +116,13 @@ public class frmLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLoginActionPerformed
-        // TODO add your handling code here:
+        // Código do botão login
+        Dados clsdados = new Dados();
+        if (!clsdados.validarUsuarios(txtususario.gettext(), txtsenha.getPassword())) {
+            Object cmdsair = null;
+            JOptionPane.showMessageDialog(rootPane, cmdsair);
+
+        }
     }//GEN-LAST:event_cmdLoginActionPerformed
 
     private void cmdSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdSairActionPerformed
