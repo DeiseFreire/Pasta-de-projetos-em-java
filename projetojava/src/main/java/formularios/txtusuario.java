@@ -9,13 +9,17 @@ package formularios;
  *
  * @author deise
  */
-class txtsenha {
+class txtusuario {
 
-    static String getPassword() {
+    static void requestFocusinWindow() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     static void setText(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static String getText() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

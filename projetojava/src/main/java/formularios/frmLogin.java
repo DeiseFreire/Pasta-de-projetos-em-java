@@ -6,6 +6,7 @@
 package formularios;
 
 import Classes.Dados;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -55,8 +56,18 @@ public class frmLogin extends javax.swing.JFrame {
         txtSenha1.setText("Senha:");
 
         jTextField1.setText("txtUsuario");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         cmdLogin.setText("Login");
         cmdLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -98,9 +109,9 @@ public class frmLogin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,17 +129,33 @@ public class frmLogin extends javax.swing.JFrame {
     private void cmdLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLoginActionPerformed
         // Código do botão login
         Dados clsdados = new Dados();
-        if (!clsdados.validarUsuarios(txtususario.gettext(), txtsenha.getPassword())) {
+        if (!clsdados.validarUsuarios(txtusuario.getText(), txtsenha.getPassword())) {
             Object cmdsair = null;
-            JOptionPane.showMessageDialog(rootPane, cmdsair);
-
+            JOptionPane.showMessageDialog(rootPane, "URUÁRIO E SENHA INCORRETAS");
+            txtusuario.setText("");
+            txtsenha.setText("");
+            txtusuario.requestFocusinWindow();
+            return;
+        } else {
         }
+        frmMenu frmmenu = new frmMenu();
+        this.setVisible(false);
+        frmmenu.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frmmenu.setVisible(true);
     }//GEN-LAST:event_cmdLoginActionPerformed
 
     private void cmdSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdSairActionPerformed
         // Este é o código do botão sair
         this.dispose();
     }//GEN-LAST:event_cmdSairActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,10 +185,8 @@ public class frmLogin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new frmLogin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new frmLogin().setVisible(true);
         });
     }
 
